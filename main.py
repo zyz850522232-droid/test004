@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from calculator import calculate
 
 def main():

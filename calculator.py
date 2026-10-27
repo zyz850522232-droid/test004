@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 def calculate(a, b, operator):
     """
@@ -27,4 +26,4 @@ def calculate(a, b, operator):
             raise ZeroDivisionError("错误：除数不能为零")
         return a / b
     else:
-        raise ValueError("错误：不支持的运算符 '%s'" % operator)
+        raise ValueError(f"错误：不支持的运算符 '{operator}'")

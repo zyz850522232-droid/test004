@@ -1,8 +1,8 @@
 from calculator import calculate
 
 def main():
-    print("欢迎使用简易计算器！(支持 +, -, *, /, **, ^)")
-    print("提示: 输入 '5 ^' 可计算 5 的平方")
+    print("欢迎使用简易计算器！(支持 +, -, *, /, **, ^, ^^)")
+    print("提示: 输入 '5 ^' 可计算 5 的平方, '5 ^^' 可计算 5 的四次方")
     while True:
         try:
             expr = input("\n请输入表达式 (例如: 1 + 2): ")
@@ -12,10 +12,11 @@ def main():
             
             parts = expr.split()
             
-            # 处理平方运算符 '^' (单目)
-            if len(parts) == 2 and parts[1] == '^':
+            # 处理单目运算符 '^' (平方) 和 '^^' (四次方)
+            if len(parts) == 2 and parts[1] in ('^', '^^'):
                 a = float(parts[0])
-                result = calculate(a, None, '^')
+                operator = parts[1]
+                result = calculate(a, None, operator)
                 print(f"结果: {result}")
                 continue
 

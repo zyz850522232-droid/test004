@@ -5,7 +5,7 @@ def calculate(a, b, operator):
     Args:
         a (float/int): 第一个操作数。
         b (float/int): 第二个操作数。
-        operator (str): 运算符 ('+', '-', '*', '/', '**', '^')。
+        operator (str): 运算符 ('+', '-', '*', '/', '**', '^', '^^')。
 
     Returns:
         float: 计算结果。
@@ -28,5 +28,7 @@ def calculate(a, b, operator):
         return a ** b
     elif operator == '^':
         return a ** 2
+    elif operator == '^^':
+        return a ** 4
     else:
         raise ValueError(f"错误：不支持的运算符 '{operator}'")

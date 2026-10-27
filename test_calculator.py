@@ -28,5 +28,10 @@ class TestCalculator(unittest.TestCase):
     def test_square(self):
         self.assertEqual(calculate(5, None, '^'), 25)
 
+    def test_fourth_power(self):
+        self.assertEqual(calculate(2, None, '^^'), 16)
+        self.assertEqual(calculate(-3, None, '^^'), 81)
+        self.assertEqual(calculate(0, None, '^^'), 0)
+
 if __name__ == '__main__':
     unittest.main()
